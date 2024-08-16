@@ -28,7 +28,7 @@ function readFileContent(filePath) {
       }
     } else {
       console.log(data);
-    }g
+    }
   });
 }
 
