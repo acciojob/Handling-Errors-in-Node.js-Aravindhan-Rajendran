@@ -22,7 +22,7 @@ function readFileContent(filePath) {
   fs.readFile(resolvedPath, 'utf8', (err, data) => {
     if (err) {
       if (err.code === 'ENOENT') {
-        console.error(`Error: Column '${columnname}' not found in the CSV.`);
+        console.error(`Error: Column '${columnName}' not found in the CSV.`);
       } else {
         console.error("Error: Unable to read the file.");
       }
