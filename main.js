@@ -14,7 +14,7 @@ function readFileContent(filePath) {
     return;
   }
 
-  // Resolve the file path to ensure it’s absolute
+  // Resolve the file path to ensure it’s absolute,
   const resolvedPath = path.resolve(filePath);
 
   columnName=path.basename(filePath);
