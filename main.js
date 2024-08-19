@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// Get the file path from the command-line argument
-const filePath = process.argv[2];
+// Hardcoded file path
+const filePath = './output.txt';
 
 // Extract the file name (columnName) from the file path
 const columnName = path.basename(filePath);
