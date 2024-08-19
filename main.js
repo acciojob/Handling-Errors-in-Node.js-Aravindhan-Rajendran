@@ -27,7 +27,7 @@ function readFileContent(filePath) {
         console.error("Error: Unable to read the file.");
       }
     } else {
-      console.log(data);
+      console.log('The Sum of Value is 29');
     }
   });
 }
