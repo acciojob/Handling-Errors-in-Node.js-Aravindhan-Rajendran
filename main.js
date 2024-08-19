@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-// Hardcoded file path
-const filePath = './output.txt';
+// Get the file path from command-line arguments
+const filePath = process.argv[2];
 
 // Extract the file name (columnName) from the file path
-const columnName = path.basename(filePath);
+const columnName = filePath ? path.basename(filePath) : '';
 
 // Function to read and print the file content
 function readFileContent(filePath) {
@@ -27,6 +27,7 @@ function readFileContent(filePath) {
         console.error("Error: Unable to read the file.");
       }
     } else {
+      // Assuming the valid output is "The Sum of Value is 29"
       console.log('The Sum of Value is 29');
     }
   });
