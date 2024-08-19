@@ -1,10 +1,11 @@
-
-
 const fs = require('fs');
 const path = require('path');
 
 // Get the file path from the command-line argument
 const filePath = process.argv[2];
+
+// Extract the file name (columnName) from the file path
+const columnName = path.basename(filePath);
 
 // Function to read and print the file content
 function readFileContent(filePath) {
@@ -14,10 +15,9 @@ function readFileContent(filePath) {
     return;
   }
 
-  // Resolve the file path to ensure it’s absolute,
+  // Resolve the file path to ensure it’s absolute
   const resolvedPath = path.resolve(filePath);
 
-  columnName=path.basename(filePath);
   // Attempt to read the file
   fs.readFile(resolvedPath, 'utf8', (err, data) => {
     if (err) {
